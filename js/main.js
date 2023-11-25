@@ -34,7 +34,12 @@
 
     // Search model
     $('.search-switch').on('click', function () {
-        $('.search-model').fadeIn(400);
+        // $('.search-model').fadeIn(400);
+        alert("Để cho đẹp thôi chứ chả tác dụng gì đâu 🐧")
+    });
+
+    $('.icon_profile').on('click', function () {
+        alert("Để cho đẹp thôi chứ chả tác dụng gì đâu 🐧")
     });
 
     $('.search-close-switch').on('click', function () {
