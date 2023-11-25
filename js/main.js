@@ -8,8 +8,8 @@
         Preloader
     --------------------*/
     $(window).on('load', function () {
-//         $(".loader").fadeOut();
-//         $("#preloder").delay(50).fadeOut("slow");
+        $(".loader").fadeOut();
+        $("#preloder").delay(50).fadeOut("slow");
 
         /*------------------
             FIlter
