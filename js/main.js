@@ -51,7 +51,7 @@
         const response = await fetch(api);
         const data = await response.json();
         if (data.length == 0) {
-            $('#hometitle').html(`<h4>Kết quả cho: "${input}"</h4>`);
+            $('#hometitle').html(`<h4>Kết quả:</h4>`);
             $('#homepage').html(`<h5 style="padding-left:15px">Không tìm thấy truyện nào!</h5>`);
             $('.search-model').fadeOut(400, function () {});
             return;
@@ -74,7 +74,7 @@
             </div>
         `;
         });
-        $('#hometitle').html(`<h4>Kết quả cho: "${input}"</h4>`);
+        $('#hometitle').html(`<h4>Kết quả:</h4>`);
         $('#homepage').html(html);
         $('.search-model').fadeOut(400, function () {});
         
