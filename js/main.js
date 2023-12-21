@@ -37,6 +37,48 @@
         $('.search-model').fadeIn(400);
         // alert("Để cho đẹp thôi chứ chả tác dụng gì đâu 🐧")
     });
+    $('#shorten_form').on('submit', async function () {
+        const input = $('#shorten_input').val();
+        if(!input) {
+            $('#shorten_input').val('');
+            return alert("Bạn chưa điền link!");
+        }
+        //check if input is url
+        const urlRegex = new RegExp(
+            "^(https?:\\/\\/)?" + // protocol
+            "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|"+ // domain name
+            "((\\d{1,3}\\.){3}\\d{1,3}))"+ // OR ip (v4) address
+            "(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*"+ // port and path
+            "(\\?[;&a-z\\d%_.~+=-]*)?"+ // query string
+            "(\\#[-a-z\\d_]*)?$","i"); // fragment locator
+        if (!urlRegex.test(input)) {
+            $('#shorten_input').val('');
+            return alert("Link không hợp lệ!");
+        }
+        
+        const api = "https://bltx-backend-677c381e9aae.herokuapp.com/api/shorten?url=" + input;
+
+        const response = await fetch(api);
+        const res = await response.text();
+
+        const shortenUrl = "https://baclethanxa.me/s/" + res;
+        navigator.clipboard.writeText(shortenUrl);
+
+        $('#shorten_output').val(shortenUrl);
+
+        setTimeout(function() {
+            alert('Rút gọn thành công!');
+        }, 500);
+    });
+
+    $('#shorten_output').on('click', function () {
+        const output = $('#shorten_output').val();
+        if(!output) {
+            return;
+        }
+        navigator.clipboard.writeText(output);
+        alert("Đã copy vào clipboard!");
+    });
 
     $('.search-model-form').on('submit', async function () {
         const input = $('#search-input').val();

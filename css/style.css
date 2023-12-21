@@ -149,7 +149,7 @@ ol {
 }
 
 .spad {
-	padding-top: 100px;
+	padding-top: 50px;
 	padding-bottom: 100px;
 }
 
@@ -1332,7 +1332,7 @@ ol {
 -----------------------*/
 
 .normal-breadcrumb {
-	height: 300px;
+	height: 200px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1730,7 +1730,7 @@ ol {
 	padding-left: 145px;
 }
 
-.login__form:after {
+/* .login__form:after {
 	position: absolute;
 	right: -14px;
 	top: -40px;
@@ -1738,7 +1738,7 @@ ol {
 	width: 1px;
 	background: rgba(255, 255, 255, 0.2);
 	content: "";
-}
+} */
 
 .login__form h3 {
 	color: #ffffff;
@@ -1749,7 +1749,7 @@ ol {
 
 .login__form form .input__item {
 	position: relative;
-	width: 370px;
+	width: 836px;
 	margin-bottom: 20px;
 }
 
@@ -1895,7 +1895,7 @@ ol {
 -----------------------*/
 
 .signup {
-	padding-top: 130px;
+	/* padding-top: 130px; */
 	padding-bottom: 150px;
 }
 

@@ -67,7 +67,7 @@ function getRandoms(arr, num) {
 //   const divList = [
 //     `<div class="product__item" bis_skin_checked="1">
 //       <a href="https://hentaivn.tv/33545-doc-truyen-toi-chuyen-sinh-thanh-loli.html">
-//         <div class="product__item__pic set-bg" data-setbg="https://t.htvncdn.net/images/300/1694292447-cover.jpg" style="background-image: url(&quot;https://t.htvncdn.net/images/300/1694292447-cover.jpg&quot;);" bis_skin_checked="1">
+//         <div class="product__item__pic set-bg" data-setbg="https://t.htvncdn.net/images/1200/1694292447-cover.jpg" style="background-image: url(&quot;https://t.htvncdn.net/images/300/1694292447-cover.jpg&quot;);" bis_skin_checked="1">
 //             <div class="ep" bis_skin_checked="1">Ongoing</div>
 //         </div>
 //       </a>
@@ -78,7 +78,7 @@ function getRandoms(arr, num) {
 //     </div>`,
 //     `<div class="product__item" bis_skin_checked="1">
 //     <a href="https://hentaivn.tv/28817-doc-truyen-cau-chuyen-ve-nhung-valkyrie-nu-phu-thuy-.html">
-//       <div class="product__item__pic set-bg" data-setbg="https://t.htvncdn.net/images/300/1700896141-001.jpg" style="background-image: url(&quot;https://t.htvncdn.net/images/300/1700896141-001.jpg&quot;);" bis_skin_checked="1">
+//       <div class="product__item__pic set-bg" data-setbg="https://t.htvncdn.net/images/1200/1700896141-001.jpg" style="background-image: url(&quot;https://t.htvncdn.net/images/300/1700896141-001.jpg&quot;);" bis_skin_checked="1">
 //           <div class="ep" bis_skin_checked="1">Ongoing</div>
 //       </div>
 //     </a>
@@ -89,7 +89,7 @@ function getRandoms(arr, num) {
 //   </div>`,
 //   `<div class="product__item" bis_skin_checked="1">
 //   <a href="https://hentaivn.tv/18383-doc-truyen-no-le-tai-meo.html">
-//     <div class="product__item__pic set-bg" data-setbg="https://t.htvncdn.net/images/300/1699475143-00.jpg" style="background-image: url(&quot;https://t.htvncdn.net/images/300/1699475143-00.jpg&quot;);" bis_skin_checked="1">
+//     <div class="product__item__pic set-bg" data-setbg="https://t.htvncdn.net/images/1200/1699475143-00.jpg" style="background-image: url(&quot;https://t.htvncdn.net/images/300/1699475143-00.jpg&quot;);" bis_skin_checked="1">
 //         <div class="ep" bis_skin_checked="1">Ongoing</div>
 //     </div>
 //   </a>
@@ -103,7 +103,7 @@ function getRandoms(arr, num) {
 //   return divList[Math.floor(Math.random() * divList.length)];
 // };
 
-//make a random trending every 2s
+// //make a random trending every 2s
 // setInterval(function(){
 //   document.getElementById("trend").innerHTML = randomTrending();
 // }, 2000);
