@@ -37,7 +37,8 @@
         $('.search-model').fadeIn(400);
         // alert("Để cho đẹp thôi chứ chả tác dụng gì đâu 🐧")
     });
-    $('#shorten_form').on('submit', async function () {
+    $('#shorten_form').on('submit', async function (event) {
+        event.preventDefault();
         const input = $('#shorten_input').val();
         if(!input) {
             $('#shorten_input').val('');
@@ -80,7 +81,8 @@
         alert("Đã copy vào clipboard!");
     });
 
-    $('.search-model-form').on('submit', async function () {
+    $('.search-model-form').on('submit', async function (event) {
+        event.preventDefault();
         const input = $('#search-input').val();
         if(!input) {
             $('.search-model').fadeOut(400, function () {
