@@ -23,21 +23,11 @@ async function getHomepage() {
       `;
       //<div class="comment"><i class="fa fa-thumbs-up"></i> 11</div>
   });
-  return html;
-}
-getHomepage().then((html) => {
-  document.getElementById("homepage").innerHTML = html;
-});
-
-async function getRandom() {
-  const api = baseUrl + "api/random";
-  const response = await fetch(api);
-  const data = await response.json();
   const limit = (data.length * 2) / 3;
   const randomBooks = getRandoms(data, limit.toFixed(0));
-  let html = "";
+  let htmlRandom = "";
   randomBooks.forEach((element) => {
-    html += `
+    htmlRandom += `
     <a href="${element.url}">
       <div class="product__sidebar__view__item set-bg mix day years" data-setbg="${element.cover}" style="background-image: url(&quot;${element.cover}&quot;);">
         <div class="ep">${element.status}</div>
@@ -47,12 +37,37 @@ async function getRandom() {
       `;
   });
 
-  return html;
+  return {html, htmlRandom};
 }
-
-getRandom().then((html) => {
-  document.getElementById("random").innerHTML = html;
+getHomepage().then((data) => {
+  document.getElementById("homepage").innerHTML = data.html;
+  document.getElementById("random").innerHTML = data.htmlRandom;
 });
+
+// async function getRandom() {
+//   const api = baseUrl + "api/random";
+//   const response = await fetch(api);
+//   const data = await response.json();
+//   const limit = (data.length * 2) / 3;
+//   const randomBooks = getRandoms(data, limit.toFixed(0));
+//   let html = "";
+//   randomBooks.forEach((element) => {
+//     html += `
+//     <a href="${element.url}">
+//       <div class="product__sidebar__view__item set-bg mix day years" data-setbg="${element.cover}" style="background-image: url(&quot;${element.cover}&quot;);">
+//         <div class="ep">${element.status}</div>
+//         <h5><b>${element.title}</b></h5>
+//       </div>
+//     </a>
+//       `;
+//   });
+
+//   return html;
+// }
+
+// getRandom().then((html) => {
+//   document.getElementById("random").innerHTML = html;
+// });
 
 // getBanner().then((html) => {
 //   document.getElementById("banner").innerHTML = html;
