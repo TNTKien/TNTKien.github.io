@@ -10,7 +10,7 @@ async function getHomepage() {
         <div class="col-lg-4 col-md-6 col-sm-6">
             <div class="product__item">
               <a href="${element.url}">
-                <div class="product__item__pic set-bg" data-setbg="${element.cover}" style="background-image: url(&quot;${element.cover}&quot;);">
+                <div class="product__item__pic set-bg lazy" data-src="${element.cover}" style="background-image: url('./img/plh.png');">
                     <div class="ep">${element.status}</div>
                 </div>
               </a>
@@ -29,7 +29,7 @@ async function getHomepage() {
   randomBooks.forEach((element) => {
     htmlRandom += `
     <a href="${element.url}">
-      <div class="product__sidebar__view__item set-bg mix day years" data-setbg="${element.cover}" style="background-image: url(&quot;${element.cover}&quot;);">
+      <div class="product__sidebar__view__item set-bg mix day years lazy" data-src="${element.cover}" style="background-image: url('./img/plh.png');">
         <div class="ep">${element.status}</div>
         <h5><b>${element.title}</b></h5>
       </div>
@@ -42,32 +42,27 @@ async function getHomepage() {
 getHomepage().then((data) => {
   document.getElementById("homepage").innerHTML = data.html;
   document.getElementById("random").innerHTML = data.htmlRandom;
+
+  // Set up Intersection Observer after the HTML is added to the page
+  const lazyImages = [].slice.call(document.querySelectorAll(".lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target;
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.src})`;
+          lazyImage.classList.remove("lazy");
+          lazyImageObserver.unobserve(lazyImage);
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage);
+    });
+  }
 });
-
-// async function getRandom() {
-//   const api = baseUrl + "api/random";
-//   const response = await fetch(api);
-//   const data = await response.json();
-//   const limit = (data.length * 2) / 3;
-//   const randomBooks = getRandoms(data, limit.toFixed(0));
-//   let html = "";
-//   randomBooks.forEach((element) => {
-//     html += `
-//     <a href="${element.url}">
-//       <div class="product__sidebar__view__item set-bg mix day years" data-setbg="${element.cover}" style="background-image: url(&quot;${element.cover}&quot;);">
-//         <div class="ep">${element.status}</div>
-//         <h5><b>${element.title}</b></h5>
-//       </div>
-//     </a>
-//       `;
-//   });
-
-//   return html;
-// }
-
-// getRandom().then((html) => {
-//   document.getElementById("random").innerHTML = html;
-// });
 
 // getBanner().then((html) => {
 //   document.getElementById("banner").innerHTML = html;
