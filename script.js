@@ -10,7 +10,7 @@ async function getHomepage() {
         <div class="col-lg-4 col-md-6 col-sm-6">
             <div class="product__item">
               <a href="${element.url}">
-                <div class="product__item__pic set-bg lazy" data-src="${element.cover}" style="background-image: url('./img/plh.png');">
+                <div class="product__item__pic set-bg lazy" data-src="${element.cover}">
                     <div class="ep">${element.status}</div>
                 </div>
               </a>
@@ -29,7 +29,7 @@ async function getHomepage() {
   randomBooks.forEach((element) => {
     htmlRandom += `
     <a href="${element.url}">
-      <div class="product__sidebar__view__item set-bg mix day years lazy" data-src="${element.cover}" style="background-image: url('./img/plh.png');">
+      <div class="product__sidebar__view__item set-bg mix day years lazy" data-src="${element.cover}">
         <div class="ep">${element.status}</div>
         <h5><b>${element.title}</b></h5>
       </div>
@@ -72,7 +72,7 @@ function getRandoms(arr, num) {
   const shuffled = [...arr].sort(() => 0.5 - Math.random());
   return shuffled.slice(0, num);
 }
-
+//style="background-image: url('./img/plh.png');"
 // function randomTrending(){
 //   const divList = [
 //     `<div class="product__item" bis_skin_checked="1">
