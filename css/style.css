@@ -371,13 +371,13 @@ ol {
 .header__menu ul li:hover .dropdown li a {
 	background: transparent;
 }
+.header__menu ul li:hover .dropdown li a:hover {
+	background: transparent;
+	background-color: #e53637;
+}
 
 .header__menu ul li:last-child {
 	margin-right: 0;
-}
-
-.dropitem:hover {
-	background-color: #e53637;
 }
 
 .header__menu ul li .dropdown {
