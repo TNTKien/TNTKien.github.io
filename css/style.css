@@ -376,6 +376,10 @@ ol {
 	margin-right: 0;
 }
 
+.dropitem:hover {
+	background: #e53637;
+}
+
 .header__menu ul li .dropdown {
 	position: absolute;
 	left: 0;
