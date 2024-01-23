@@ -24,10 +24,10 @@ async function getHomepage() {
                 </div>
               </a>
               <div class="product__item__text">
-                <h5><a href="${element.url}">${element.title}</a></h5>
                 <ul class="product__item__list">
                   ${tagList}
                 </ul>
+                <h5><a href="${element.url}">${element.title}</a></h5>
               </div>
             </div>
         </div>
