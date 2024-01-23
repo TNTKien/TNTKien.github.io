@@ -6,12 +6,12 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://baclethanxa.me/</loc>
-  <lastmod>2024-01-10T13:10:22+00:00</lastmod>
+  <lastmod>2024-01-23T20:15:36+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://baclethanxa.me/shortener</loc>
-  <lastmod>2024-01-10T13:10:22+00:00</lastmod>
+  <lastmod>2024-01-23T20:15:36+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -22,6 +22,11 @@
 <url>
   <loc>https://baclethanxa.me/doro/</loc>
   <lastmod>2024-01-07T09:00:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baclethanxa.me/search</loc>
+  <lastmod>2024-01-23T20:15:36+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
