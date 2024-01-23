@@ -37,6 +37,7 @@ body {
 	font-family: "Mulish", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	background: #0b0c2a;
+	
 }
 
 h1,
@@ -947,6 +948,70 @@ ol {
 .product__pagination a i {
 	color: #b7b7b7;
 	font-size: 15px;
+}
+
+.searchBar {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.search_form {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+#searchQueryInput {
+    background: #fff;
+    border: none;
+    border-radius: 1.625rem;
+    font-size: 1rem;
+    height: 2.8rem;
+    outline: none;
+    padding: 0 3.5rem 0 1.5rem;
+    width: 100%;
+}
+
+#searchQuerySubmit {
+    background: none;
+    border: none;
+    height: 2.8rem;
+    margin-left: -3.5rem;
+    outline: none;
+    width: 3.5rem;
+}
+
+input[type=checkbox]{
+    accent-color: red;
+}
+
+/* .tags ul {
+	margin-bottom: 30px;
+}
+
+.tags ul li {
+	list-style: none;
+	display: inline-block;
+	margin-right: 10px;
+	color: #ffffff;
+} */
+
+.ul-search {
+	display: flex;
+    flex-wrap: wrap;
+	padding: 0;
+    margin: 0;
+}
+.ul-search li {
+	list-style-type: none;
+	color: #ffffff;
+	display: flex;
+	align-items: center;
+	flex-basis: calc(100% / 6);
 }
 
 /*---------------------
@@ -2020,6 +2085,9 @@ ol {
 /* Medium Device = 1200px */
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
+	.ul-search li {
+		flex-basis: calc(100% / 5);
+	}
 	.hero {
 		overflow: hidden;
 	}
@@ -2038,6 +2106,9 @@ ol {
 /* Tablet Device = 768px */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+	.ul-search li {
+		flex-basis: calc(100% / 4);
+	}
 	.hero {
 		overflow: hidden;
 	}
@@ -2143,6 +2214,9 @@ ol {
 /* Wide Mobile = 480px */
 
 @media only screen and (max-width: 767px) {
+	.ul-search li {
+		flex-basis: calc(100% / 3);
+	}
 	.hero {
 		overflow: hidden;
 	}
@@ -2229,7 +2303,7 @@ ol {
 		padding-top: 50px;
 	}
 	.btn__all {
-		text-align: left;
+		text-align: right;
 	}
 	.product__page__title .section-title {
 		margin-bottom: 30px;
@@ -2284,6 +2358,9 @@ ol {
 /* Small Device = 320px */
 
 @media only screen and (max-width: 479px) {
+	.ul-search li {
+		flex-basis: calc(100% / 2);
+	}
 	.hero__slider.owl-carousel .owl-nav {
 		display: none;
 	}
