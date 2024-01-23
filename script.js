@@ -6,6 +6,15 @@ async function getHomepage() {
   const data = await response.json();
   let html = "";
   data.forEach((element) => {
+    let tagList = '';
+    if (element.tags && element.tags.length) {
+      tagList = element.tags.slice(0, 5).map((tag) => `<li class="cate-item">${tag}</li>`).join("\n");
+      if (element.tags.length > 5) {
+        const remainingTags = element.tags.slice(5).join(', ');
+        tagList += `\n<li class="cate-item"><a href="#" onclick="event.preventDefault();"><span title="${remainingTags}">...</span></a></li>`;
+      }
+    }
+
     html += `
         <div class="col-lg-4 col-md-6 col-sm-6">
             <div class="product__item">
@@ -15,8 +24,10 @@ async function getHomepage() {
                 </div>
               </a>
               <div class="product__item__text">
-                  <h5><a href="${element.url}">${element.title}</a>
-                  </h5>
+                <h5><a href="${element.url}">${element.title}</a></h5>
+                <ul class="product__item__list">
+                  ${tagList}
+                </ul>
               </div>
             </div>
         </div>
@@ -31,8 +42,9 @@ async function getHomepage() {
     <a href="${element.url}">
       <div class="product__sidebar__view__item set-bg mix day years lazy" data-src="${element.cover}">
         <div class="ep">${element.status}</div>
-        <h5><b>${element.title}</b></h5>
       </div>
+      <h5><b>${element.title}</b></h5>
+      <br>
     </a>
       `;
   });
