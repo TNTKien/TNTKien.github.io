@@ -127,18 +127,7 @@
     $(".search-model").fadeOut(400, function () {});
   });
 
-  // $('.triggerTags').on('click', function () {
-  //     //check if have hidden attribute
-  //     if ($('.ul-search').attr('hidden')) {
-  //         $('.ul-search').removeAttr('hidden');
-  //     }
-  //     else {
-  //         $('.ul-search').attr('hidden', true);
-  //     }
-
-  // });
-
-  $("#searchQuerySubmit").on("click", async function (event) {
+  $(".search_form").on("submit", async function (event) {
     event.preventDefault();
     const input = $("#searchQueryInput").val();
     //get checked tags
