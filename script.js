@@ -1,7 +1,7 @@
-const baseUrl = "https://db.baclethanxa.me/";
+const baseUrl = "https://api.baclethanxa.me/";
 
 async function getHomepage() {
-  const api = baseUrl + "api/books";
+  const api = baseUrl + "books";
   const response = await fetch(api);
   const data = await response.json();
   let html = "";

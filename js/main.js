@@ -57,7 +57,7 @@
     }
 
     const api =
-      "https://db.baclethanxa.me/api/shorten?url=" +
+      "https://api.baclethanxa.me/shorten?url=" +
       input;
 
     const response = await fetch(api);
@@ -93,7 +93,7 @@
     }
 
     const api =
-      "https://db.baclethanxa.me/api/search?key=" + input;
+      "https://api.baclethanxa.me/search?key=" + input;
     const response = await fetch(api);
     const data = await response.json();
     if (data.length == 0) {
@@ -144,7 +144,7 @@
     $("#result").removeAttr("hidden");
     $(".tags").attr("hidden", true);
     const api =
-      "https://db.baclethanxa.me/api/search?key=" +
+      "https://api.baclethanxa.me/search?key=" +
       input +
       "&tags=" +
       tags.join(",");
