@@ -57,7 +57,7 @@
     }
 
     const api =
-      "https://bltx-backend-677c381e9aae.herokuapp.com/api/shorten?url=" +
+      "https://db.baclethanxa.me/api/shorten?url=" +
       input;
 
     const response = await fetch(api);
@@ -93,7 +93,7 @@
     }
 
     const api =
-      "https://bltx-backend-677c381e9aae.herokuapp.com/api/search?key=" + input;
+      "https://db.baclethanxa.me/api/search?key=" + input;
     const response = await fetch(api);
     const data = await response.json();
     if (data.length == 0) {
@@ -144,7 +144,7 @@
     $("#result").removeAttr("hidden");
     $(".tags").attr("hidden", true);
     const api =
-      "https://bltx-backend-677c381e9aae.herokuapp.com/api/search?key=" +
+      "https://db.baclethanxa.me/api/search?key=" +
       input +
       "&tags=" +
       tags.join(",");

@@ -1,4 +1,4 @@
-const baseUrl = "https://bltx-backend-677c381e9aae.herokuapp.com/";
+const baseUrl = "https://db.baclethanxa.me/";
 
 async function getHomepage() {
   const api = baseUrl + "api/books";
